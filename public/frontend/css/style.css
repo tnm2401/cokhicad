@@ -10,6 +10,7 @@ body {
   /* overflow-x: hidden; */
   /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-family: "Nunito", sans-serif !important;
+  top: 0 !important;
 }
 .bg-primary {
   background-color: #0b3f81 !important;
@@ -718,4 +719,10 @@ footer .content p {
 .image-footer i{
     font-size: 50px;
     color:#ffffff;
+}
+.skiptranslate {
+    display: none !important;
+}
+.icon_lang img {
+  cursor: pointer;
 }

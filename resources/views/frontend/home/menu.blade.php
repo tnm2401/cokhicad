@@ -95,8 +95,8 @@
                             <li class="nav-item {{ $isactive == 'lien-he' ? 'active' : '' }} pl-lg-0 ml-lg-0 pl-4 pl-md-0 ml-0 ml-md-4 pl-md-4"> <a class="nav-link" href="{{ route('frontend.slug',$menu['lien-he']->translations->slug) }}">{{ __('LIÊN HỆ') }} </a> </li>
 
                             <li class="d-flex">
-                                <a class="icon_lang" href="#"><img src="{{ asset('frontend') }}/img/vietnamese.png" alt="" /></a>
-                                <a class="icon_lang" href="#"><img src="{{ asset('frontend') }}/img/english.png" alt="" /></a>
+                                <a class="icon_lang" href="{{ route('frontend.locale', $lang) }}"><img src="{{ asset('frontend') }}/img/vietnamese.png" alt="" data-google-lang="" /></a>
+                                <a class="icon_lang"><img src="{{ asset('frontend') }}/img/english.png" alt="en" data-google-lang="en" /></a>
                             </li>
                         </ul>
 
@@ -108,6 +108,3 @@
         </div>
     </div>
 </div>
-
-
-

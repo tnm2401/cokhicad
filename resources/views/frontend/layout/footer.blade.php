@@ -31,11 +31,8 @@
         </div>
     </div>
 </footer>
-
-<div class="footer-line">
-    Copyright © 2022. CAD. All Rights Reserved. Designed by <a href="https://aib.vn">AIB.VN</a>
+<div class="footer-line">Copyright © 2022. CAD. All Rights Reserved. Designed by <a href="https://aib.vn">AIB.VN</a>
 </div>
-
 <a href="#" class="scrollToTop"><i class="fa-solid fa-up-long"></i></a>
 <div class="chat-nav">
     <ul>
@@ -69,8 +66,10 @@
       </li>
     </ul>
   </div>
-
 <script src="{{ asset('frontend') }}/js/jquery-3.2.1.min.js"></script>
+<script src="{{ asset('frontend') }}/js/jquery.cookie.min.js"></script>
+<script src="{{ asset('frontend') }}/js/google-translate.js"></script>
+<script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
 <script src="{{ asset('frontend') }}/js/popper.js"></script>
 <script src="{{ asset('frontend') }}/js/bootstrap.min.js"></script>
 <script src="{{ asset('frontend') }}/js/owl.carousel.min.js"></script>

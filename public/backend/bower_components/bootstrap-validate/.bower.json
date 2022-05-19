@@ -1,0 +1,15 @@
+{
+  "name": "bootstrap-validate",
+  "homepage": "https://github.com/PascaleBeier/bootstrap-validate",
+  "version": "2.2.0",
+  "_release": "2.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.2.0",
+    "commit": "d9ce9ac2e7db634c25f4221118064f02ed8241fb"
+  },
+  "_source": "https://github.com/PascaleBeier/bootstrap-validate.git",
+  "_target": "^2.2.0",
+  "_originalSource": "bootstrap-validate",
+  "_direct": true
+}

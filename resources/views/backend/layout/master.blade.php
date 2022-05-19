@@ -1,0 +1,5 @@
+@include("backend.layout.header.index")
+@include("backend.layout.sidebar.index")
+@include('sweetalert::alert')
+@yield("content")
+@include("backend.layout.footer.index")

@@ -1,0 +1,45 @@
+body{font-family:'Montserrat',"Helvetica",Arial,sans-serif}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:'Montserrat',"Helvetica",Arial,sans-serif}.content-header>h1>small{font-weight:400}.table>tbody>tr>td,.table>tbody>tr>th,.table>tfoot>tr>td,.table>tfoot>tr>th,.table>thead>tr>td,.table>thead>tr>th{line-height:1.728571;text-align:center}li{display:block}.skin-blue .main-header .logo{background-color:#212d32}.skin-blue .main-header .logo:hover{background-color:#212d32}.skin-blue .main-header .navbar{background-color:#202d32}.skin-blue .main-header .navbar .sidebar-toggle:hover{background-color:#2b3b40}.skin-blue .main-header li.user-header{background-color:#202d32}.category-name{font-weight:700}.new-custom{margin-bottom:10px}.error-msg{width:100%;font-family:'nobelregular';color:#ff0002;display:none}.alert-custom{padding:10px}.alert-custom .alert{margin-bottom:-10px!important}.alert{margin-bottom:10px!important}.charcounter{position:absolute;right:10px}.charcounter-index{position:absolute;right:10px}.charcounter-descriptions{position:absolute;right:10px}.charcounter-slug{position:absolute;right:10px}.charcounter-title{position:absolute;right:24px}.charcounter-keywords{position:absolute;right:10px}.charcounter-description{position:absolute;right:10px}.counter{color:#ef255c}.title-seo{font-size:20px;line-height:1.3;font-weight:400;font-family:arial,sans-serif;color:#1a0dab;display:block;padding-top:4px;margin-bottom:3px}.url-seo{font-size:14px;padding-top:1px;line-height:1.5;color:#3C4043;font-family:arial,sans-serif;font-style:normal;font-weight:400;display:block;padding-bottom:1px;padding-top:1px}.description-seo{line-height:1.58;word-wrap:break-word;color:#545454;font-family:arial,sans-serif;font-weight:400;font-size:14px;display:block;margin-bottom:10px}.box .alert-custom{padding:10px}.treeview-menu>li>a{padding:8px 5px 8px 15px}.sidebar-menu{overflow:visible}.notification{color:red}.btn-danger{outline:none!important}.jFiler-input-inner{margin-bottom:15px}.img-thumbnail{margin-bottom:0;padding:0;border:1px solid #ddd;border-radius:2px;max-width:50px;}.label-cus{padding:2px 4px;margin-left:5px;border-radius:12px!important}.nav-tabs-custom>.nav-tabs>li.active>a{background-color:#FFFCF5}iframe{border:1px solid #3c8dbc;border-right:0}.toggle.ios,.toggle-on.ios,.toggle-off.ios{border-radius:20px}.toggle.ios .toggle-handle{border-radius:20px}.table>tbody>tr>td,.table>tbody>tr>th,.table>tfoot>tr>td,.table>tfoot>tr>th,.table>thead>tr>td,.table>thead>tr>th{vertical-align:middle}.set__width{width:100%!important}.form-group .stt{border-radius:4px;box-shadow:none;border-color:#d2d6de;height:34px;padding:6px 12px;font-size:14px;line-height:1.42857143;color:#555;background-color:#fff;background-image:none;border:1px solid #ccc;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;outline:none}.stt:focus{border-color:#3c8dbc;box-shadow:none}input.cbc{width:18px;height:18px}label.cbc{position:absolute;top:13px;left:35px}.mt-1{margin-top:10px}.content-wrapper .content ul{margin-bottom:0;padding-left:0}
+.languages ul li a span{line-height:35px}.swal2-popup{font-size: 15px !important;}.imgmt {margin-top:-8px;}#preview img {margin: 0 15px 15px 0;}#preview img:last-child {margin-right: 0;}
+.select2-container--bootstrap-5 .select2-dropdown .select2-results__options .select2-results__option {
+    padding: 0.8rem 0.75rem;
+}
+.select2-container--bootstrap-5 .select2-selection {
+    padding: 8px 12px;
+}
+.content-wrapper .content .tags ul span {
+    line-height: 20px;
+}
+.d-inline {
+    display: inline;
+}
+.mt-1 {
+    margin-top: 10px;
+}
+.ml-4 {
+    margin-left: 4px;
+}
+.mb-0 {
+    margin-bottom: 0;
+}
+.step-app>.step-content {
+    border: none !important;
+    padding: 0 !important;
+}
+#imgpreview {
+    width: 100%;
+    margin-bottom:10px;
+    border:1px solid #ddd;
+    border-radius:2px;
+}
+.swal2-container ul {
+    padding-left: 0;
+}
+.swal2-container ul li {
+   line-height: 32px;
+}
+.orders {
+    min-height: auto;padding-bottom: 0px
+}
+#stt_css {
+    max-width: 50px; text-align: center
+}

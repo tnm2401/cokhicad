@@ -31,7 +31,7 @@
                   </th>
                   <th width="5%">STT</th>
                   <th width="10%">Hình ảnh</th>
-                  <th width="25%">
+                  {{-- <th width="25%">
                     <div class="form-group">
                       <select class="form-control select2">
                         <option value="">Chọn danh mục</option>
@@ -40,7 +40,7 @@
                         @endforeach
                       </select>
                     </div>
-                  </th>
+                  </th> --}}
                   <th width="35%">Tên Videos</th>
                   <th width="10%">Hiển thị</th>
                   <th width="10%">Thao tác</th>
@@ -61,11 +61,11 @@
                     <a href="{{ route('video.edit', $video->id) }}"><img src="{{ imageUrlBackend('/storage/uploads/'.$video->img,'370','250','100','1') }}" class="img-thumbnail" style="max-width:50px;margin-bottom:0">
                     </a>
                   </td>
-                  <td>
+                  {{-- <td>
                     {{ $videocat->translations->name ?? '' }}
-                  </td>
+                  </td> --}}
                   <td>
-                    <strong><a href="{{ route('video.destroy', $video->id) }}">{{ $video->translations->name ?? '' }}</a></strong>
+                    <strong><a href="{{ route('video.edit', $video->id) }}">{{ $video->translations->name ?? '' }}</a></strong>
                   </td>
                   <td>
                     <input data-id="{{ $video->id }}" class="hide_show" type="checkbox" data-on="<i class='fa fa-check'></i>" data-off="<i class='fa fa-times'></i>" {{ $video->hide_show ? 'checked' : '' }} data-toggle="toggle" data-onstyle="success" data-offstyle="danger" data-style="ios" data-size="mini">

@@ -7,6 +7,7 @@
         @endphp
         @include('backend.layout.sidebar.dashboard')
         @if (hasRole('static_page_all'))@include('backend.layout.sidebar.page')@endif
+        @include('backend.layout.sidebar.stepwork')
         {{-- @if (hasRole('billing_all'))@include('backend.layout.sidebar.cart')@endif --}}
         {{-- @if (hasRole('counpon_all'))@include('backend.layout.sidebar.coupon')@endif --}}
         {{-- @if (hasRole('feeship_all'))@include('backend.layout.sidebar.feeship')@endif --}}

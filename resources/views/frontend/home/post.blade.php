@@ -12,10 +12,12 @@
                 <div class="row mt-2">
                     @foreach ($data['featured_post'] as $item)
                     <div class="col-md-4 col-6 mb-2">
-                        <img src="{{ imageUrl('/storage/uploads/post/'.$item->img,'350','300','100','1') }}
+                        <img src="{{ imageUrl('/storage/uploads/post/'.$item->img,'370','250','100','1') }}
                         " class="img-fluid" alt="">
                         <h3 class="name font-weight-bold text-uppercase">
+                            <a href="{{ route('frontend.slug',$item->translations->slug) }}">
                             {{ $item->translations->name }}
+                        </a>
                         </h3>
                         <div class="des">
                             {!! $item->translations->descriptions !!}

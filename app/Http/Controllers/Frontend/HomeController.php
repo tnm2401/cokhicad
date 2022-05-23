@@ -30,6 +30,7 @@
     use Gallery;
     use Videocat;
     use Video;
+    use Stepwork;
     use Jenssegers\Agent\Agent;
     use Illuminate\Support\Str;
     use Illuminate\Support\Facades\DB;
@@ -49,6 +50,7 @@
             $data['service2'] = Page::where('id',10)->first();
             $data['why-us'] = Page::where('id',11)->first();
             $data['step-work'] = Page::where('id',12)->first();
+            $data['step-work-box'] = Stepwork::orderby('stt','asc')->get();
             $data['partner'] = Partner::where('hide_show',1)->get();
             $data['contact'] = Page::where('id','13')->first();
             $data['featured_post'] = Post::orderby('stt','asc')->orderby('id','desc')
@@ -155,7 +157,8 @@
                     $post = Post::where('hide_show','1')->orderby('stt','asc')->orderby('id','desc')->paginate(9);
                     return view('frontend.site.all-post',compact('post','page','master','isactive'));
                 }
-                elseif($data->slug == 'tat-ca-dich-vu' || $data->slug == 'all-services'){
+                elseif($data->slug == 'tuyen-dung' || $data->slug == 'recruiment'){
+                    $isactive='tuyen-dung';
                     $page = Page::with('translations')->where('id',$data->trans_id)->First();
                     $master =
                     [
@@ -168,8 +171,25 @@
                         'created_at' => $page->created_at,
                         'updated_at' => $page->updated_at
                     ];
-                    $service = Svcategory::where('hide_show','1')->orderby('stt','asc')->orderby('id','desc')->paginate(9);
-                    return view('frontend.site.all-service',compact('page','service','master'));
+                    $post = Recruitment::where('hide_show','1')->orderby('stt','asc')->orderby('id','desc')->paginate(9);
+                    return view('frontend.site.all-recruitment',compact('post','page','master','isactive'));
+                }
+                elseif($data->slug == 'dich-vu' || $data->slug == 'all-services'){
+                    $isactive='dich-vu';
+                    $page = Page::with('translations')->where('id',$data->trans_id)->First();
+                    $master =
+                    [
+                        'name' => $page->translations->name,
+                        'title' => $page->translations->title,
+                        'keywords' => $page->translations->keywords,
+                        'description' => $page->translations->description,
+                        'img' => 'pages/'.$page->img,
+                        'type' => $page->type,
+                        'created_at' => $page->created_at,
+                        'updated_at' => $page->updated_at
+                    ];
+                    $service = Servi::where('hide_show','1')->orderby('stt','asc')->orderby('id','desc')->paginate(9);
+                    return view('frontend.site.all-service',compact('page','service','master','isactive'));
                 }
                 elseif($data->slug == 'tat-ca-anh' || $data->slug == 'all-gallery'){
                     $page = Page::with('translations')->where('id',$data->trans_id)->First();

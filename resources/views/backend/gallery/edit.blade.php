@@ -44,7 +44,7 @@
                             <div class="box-body">
                                 <div class="form-group">
                                     <label>Tên ({{ session('locale') }})</label>
-                                    <input disabled readonly type="text" name="translation[name]"
+                                    <input disabled  type="text" name="translation[name]"
                                         value="@if (isset($gallery->translations->name)){{ old('translation[name]', $gallery->translations->name) }}@else{{ old('translation[name]') }} @endif"
                                         class="form-control" data-toggle="tooltip" data-placement="top"
                                         title="Nhập tiêu đề hình ảnh ">
@@ -116,8 +116,8 @@
                                     </div>
                                 </div>
                                 <button class="btn btn-primary"><i class="fa fa-save"></i> Lưu</button>
-                                <a href="{{ route('backend.newcatone.index') }}" class="btn btn-danger"><i
-                                        class="fa fa-times-circle"></i> Thoát</a>
+                                {{-- <a href="{{ route('backend.newcatone.index') }}" class="btn btn-danger"><i
+                                        class="fa fa-times-circle"></i> Thoát</a> --}}
 
                             </div>
                         </div>
@@ -131,8 +131,8 @@
                             </div>
                             <div class="box-body">
                                 <button class="btn btn-primary"><i class="fa fa-save"></i> Lưu</button>
-                                <a href="{{ route('backend.gallery.index') }}" class="btn btn-danger"><i
-                                        class="fa fa-times-circle"></i> Thoát</a>
+                                {{-- <a href="{{ route('backend.gallery.index') }}" class="btn btn-danger"><i
+                                        class="fa fa-times-circle"></i> Thoát</a> --}}
                             </div>
                         </div>
                         <div class="box box-primary">
@@ -176,7 +176,7 @@
                             </div>
                             <div class="box-body">
                                 <div class="form-group">
-                                    <input disabled readonly type="number" name="stt" id="stt"
+                                    <input   type="number" name="stt" id="stt"
                                         value="@if (isset($gallery->stt)){{ old('stt', $gallery->stt) }}@else{{ old('stt') }} @endif"
                                         class="form-control stt" data-toggle="tooltip" data-placement="top"
                                         title="Nhập số thứ tự">
@@ -198,8 +198,8 @@
                             </div>
                             <div class="box-body">
                                 <button class="btn btn-primary"><i class="fa fa-save"></i> Lưu</button>
-                                <a href="{{ route('backend.gallery.index') }}" class="btn btn-danger"><i
-                                        class="fa fa-times-circle"></i> Thoát</a>
+                                {{-- <a href="{{ route('backend.gallery.index') }}" class="btn btn-danger"><i
+                                        class="fa fa-times-circle"></i> Thoát</a> --}}
                             </div>
                         </div>
                     </div>

@@ -37,7 +37,7 @@ return [
 
     'allow_shared_folder'      => true,
 
-    'shared_folder_name'       => 'uploads',
+    'shared_folder_name'       => 'shared',
 
     /*
     |--------------------------------------------------------------------------

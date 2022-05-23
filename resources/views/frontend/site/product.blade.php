@@ -4,9 +4,9 @@
         <nav aria-label="breadcrumb" style="margin-top: 10px">
             <ol class="breadcrumb shadow-sm">
                 <li class="breadcrumb-item"><a href="{{ url('/') }}" title=""><i class="ti-home"></i> Trang chủ</a></li>
-                <li class="breadcrumb-item"><a href="{{ $menu['tat-ca-san-pham']->translations->slug }}">Sản phẩm</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('frontend.slug',$product->procatone->translations->slug) }}">{{ $product->procatone->translations->name }}</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('frontend.slug',$product->procattwo->translations->slug) }}">{{ $product->procattwo->translations->name }}</a></li>
+                <li class="breadcrumb-item"><a href="{{ $menu['tat-ca-san-pham']->translations->slug ?? '' }}">Sản phẩm</a></li>
+                <li class="breadcrumb-item  {{ $product->procatone ? '' : 'd-none' }}"><a href="{{ route('frontend.slug',$product->procatone->translations->slug ?? '') }}">{{ $product->procatone->translations->name ?? '' }}</a></li>
+                <li class="breadcrumb-item  {{ $product->procattwo ? '' : 'd-none' }}"><a href="{{ route('frontend.slug',$product->procattwo->translations->slug ?? '') }}">{{ $product->procattwo->translations->name ?? '' }}</a></li>
                 <li class="breadcrumb-item ">{{ $product->translations->name }}</li>
             </ol>
         </nav>

@@ -12,7 +12,7 @@
 
                     </ol>
                 </nav>
-                <div class="main-title text-center mb-5">
+                <div class="main-title text-center mb-5 ">
                     <h1 class="title font-weight-bold">{{ $gallery->translations->name }}</h1>
                 </div>
 
@@ -25,7 +25,7 @@
                             data-width="560"
                             data-height="315" />
 
-                        <div class="main-title text-center mb-5">
+                        <div class="main-title text-center mb-5 mt-2">
                             <h2 style="font-size: 20px" class="title font-weight-bold">{{ $item->translations->name }}</h2>
                         </div>
                     </div>

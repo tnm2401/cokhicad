@@ -540,6 +540,16 @@ Route::group([ 'prefix' => 'administrator' , 'middleware' => ['auth'] ,'namespac
         Route::get('changeStt', 'VideocatController@changeStt')->name('backend.videocat.changestt')
         ->middleware('role:catemedia_edit');
     });
+    Route::group(['prefix' => 'stepworks'], function(){
+        Route::get('', 'StepworkController@index')->name('backend.stepwork.index');
+        Route::get('create', 'StepworkController@create')->name('backend.stepwork.create');
+        Route::get('{id}/edit', 'StepworkController@edit')->name('backend.stepwork.edit');
+        Route::post('store', 'StepworkController@store')->name('backend.stepwork.store');
+        Route::put('{id}/update', 'StepworkController@update')->name('backend.stepwork.update');
+        Route::delete('{id}/destroy', 'StepworkController@destroy')->name('backend.stepwork.destroy');
+        Route::get('hideShow', 'StepworkController@hideShow')->name('backend.stepwork.hideshow');
+        Route::get('changeStt', 'StepworkController@changeStt')->name('backend.stepwork.changestt');
+    });
     Route::group(['prefix' => 'videos'], function(){
         Route::resource('video', 'VideoController')
         ->middleware('role:media_all');

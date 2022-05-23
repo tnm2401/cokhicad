@@ -12,7 +12,7 @@
                     href="{{ route('backend.slider.index') }}"><i class="fa fa-angle-right"></i>{{ __('admin.image.slider') }}</a></li>
             <li {{ Hideshow::find(36)->hide_show == 1 ? '' : 'hidden' }} {{ Request::routeIs('backend.partner.*') ? 'class=active' : '' }}><a href="{{ route('backend.partner.index') }}"><i
                         class="fa fa-angle-right"></i>{{ __('admin.image.partner') }}</a></li>
-            <li {{ $segment2 == 'gallery' ? 'class=active' : '' }}><a href="{{ route('backend.gallery.index') }}"><i
+            <li {{ $segment2 == 'gallery' ? 'class=active' : '' }}><a href="{{ route('backend.gallery.edit',14) }}"><i
                         class="fa fa-angle-right"></i>{{ __('Thư viện ảnh') }}</a></li>
         </ul>
     </li>

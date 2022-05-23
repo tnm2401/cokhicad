@@ -4,7 +4,13 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+<<<<<<< HEAD
     <meta name="google" content="notranslate" />
+=======
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('storage') }}/uploads/{{ $master['img'] }}" />
+    <link rel="icon" type="image/png" href="{{ asset('storage') }}/uploads/{{ $master['img'] }}" />
+    <link rel="shortcut icon" href="{{ asset('storage') }}/uploads/setting/{{$setting->favicon}}" type="image/x-icon">
+>>>>>>> b3949827 (ok)
     @include('frontend.layout.seo')
     {!! $setting->codehead !!}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />

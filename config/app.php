@@ -285,6 +285,7 @@ return [
         'CartHelper' => App\Helper\CartHelper::class,
         'Gallery' => App\Models\Gallery::class,
         'Videocat' => App\Models\Videocat::class,
+        'Stepwork' => App\Models\Stepwork::class,
 
     ],
 

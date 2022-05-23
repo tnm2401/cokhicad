@@ -44,10 +44,10 @@
 <script src="{{ asset('backend') }}/assets/js/aib.js"></script>
 <script>
     var options = {
-        filebrowserImageBrowseUrl: "{{ route('backend.dashboard.index') }}/laravel-filemanager?type=files",
-        filebrowserImageUploadUrl: "{{ route('backend.dashboard.index') }}/laravel-filemanager/upload?type=files&_token={{ csrf_token() }}",
-        filebrowserBrowseUrl: "{{ route('backend.dashboard.index') }}/laravel-filemanager?type=Files",
-        filebrowserUploadUrl: "{{ route('backend.dashboard.index') }}/laravel-filemanager/upload?type=Files&_token={{ csrf_token() }}"
+        filebrowserImageBrowseUrl: "{{ route('backend.dashboard.index') }}/laravel-filemanager?type=images",
+        filebrowserImageUploadUrl: "{{ route('backend.dashboard.index') }}/laravel-filemanager/upload?type=images&_token={{ csrf_token() }}",
+        filebrowserBrowseUrl: "{{ route('backend.dashboard.index') }}/laravel-filemanager?type=Images",
+        filebrowserUploadUrl: "{{ route('backend.dashboard.index') }}/laravel-filemanager/upload?type=Images&_token={{ csrf_token() }}"
     };
 </script>
 <script>

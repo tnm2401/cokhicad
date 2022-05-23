@@ -13,7 +13,7 @@ body {
   top: 0 !important;
 }
 .bg-primary {
-  background-color: #0b3f81 !important;
+  background-color: #00437f !important;
 }
 
 .sticky-top-head {
@@ -29,8 +29,8 @@ body {
 }
 
 .about-us {
-  padding: 20px 0 40px 0;
-  margin: 60px 0 60px 0;
+  padding: 10px 0 10px 0;
+  margin: 20px 0 20px 0;
   border: 1px solid rgb(209, 202, 202);
   width: 100%;
 }
@@ -50,10 +50,9 @@ body {
 }
 .about-us .btn {
   border-radius: 0%;
-  margin-top: 20px;
   background-color: #0b33d3;
-  padding: 10px;
-  font-size: 13px;
+  padding: 5px;
+  font-size: 11px;
 }
 
 .service {
@@ -63,18 +62,18 @@ body {
 .bg-grey {
   width: 100%;
   background-color: #edf6ff;
-  padding: 50px 0 50px 0;
+  padding: 20px 0 20px 0;
 }
 .bg-grey p {
   text-align: left;
 }
 
 .why-us-bg {
-  background-color: #0164f0;
+  background-color: #00437f;
 }
 
 .why-us {
-  padding: 30px 15px 30px 15px;
+  padding: 15px;
   width: 100%;
 }
 
@@ -109,11 +108,11 @@ body {
 
 .featured {
   width: 100%;
-  padding: 0 15px 0 15px;
+  padding: 0 15px;
 }
 
 .featured-bg {
-  padding: 50px 0;
+  padding: 15px 0;
   background-color: #fefefe;
 }
 
@@ -166,7 +165,7 @@ body {
   position: relative;
   width: 100%;
   border-radius: 60px;
-  background-color: #0164f0;
+  background-color: #00437f;
   margin-bottom: 20px;
 }
 
@@ -180,7 +179,7 @@ body {
   height: 90px;
   border-radius: 50%;
   background-color: white;
-  color: #0164f0;
+  color: #00437f;
   font-size: 70px;
   z-index: 1;
   font-weight: bold;
@@ -213,12 +212,12 @@ body {
 
 .bg-white-gallery {
   overflow-x: hidden;
-  padding: 50px 0 50px 0;
+  padding: 20px 0;
 }
 
 .bg-blue-form {
-  padding: 50px 0;
-  background-color: #004cb5;
+  padding: 30px 0;
+  background-color: #00437f;
 }
 
 .bg-blue-form .title {
@@ -281,7 +280,7 @@ body {
 .bg-partner {
   overflow-x: hidden;
   width: 100%;
-  padding: 50px 0 40px 0;
+  padding: 20px 0 15px 0;
 }
 .bg-partner .title {
   width: 100%;
@@ -310,7 +309,7 @@ body {
 
 .bg-post {
   width: 100%;
-  padding: 50px 0;
+  padding: 20px 0;
 }
 
 .post-section .name {
@@ -346,7 +345,7 @@ body {
 
 footer {
   padding: 30px 0;
-  background-color: #143fd6;
+  background-color: #00437f;
 }
 footer .title {
   font-weight: bold;
@@ -369,7 +368,7 @@ footer .content p {
   border: 1px solid white;
   /* padding:10px;  */
   text-align: center;
-  background: #143fd6;
+  background: #00437f;
   font-weight: bold;
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -426,7 +425,7 @@ footer .content p {
 }
 .why-us .title span .x {
   padding: 0 10px;
-  background-color: #0363ef;
+  background-color: #00437f;
 }
 .why-us .title span .x i:first-child,
 .why-us .title span .x i:last-child {
@@ -687,8 +686,8 @@ footer .content p {
 }
 
 .footer-line{
-    color: white;
-    background-color: #092290;
+    color: #00437f;
+    /* background-color: #092290; */
     padding: 5px 0px;
     width: 100%;
     text-align: center;
@@ -696,7 +695,7 @@ footer .content p {
 }
 .footer-line a{
     text-decoration: underline;
-    color: white;
+    color: #00437f;
 }
 
 .title_pro a {
@@ -720,9 +719,72 @@ footer .content p {
     font-size: 50px;
     color:#ffffff;
 }
+<<<<<<< HEAD
 .skiptranslate {
     display: none !important;
 }
 .icon_lang img {
   cursor: pointer;
 }
+=======
+
+.name a{
+    color: #050505;
+}
+.img-fluid{
+    /* border: 3px solid black; */
+    box-shadow: 0 0 4px #444;
+    border-radius: 10px;
+}
+
+/* .label {
+    position: relative;
+}
+.icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: red;
+    border: solid white 12px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 3px black;
+    z-index: 9;
+}
+.frame {
+    position: absolute;
+    left: 10px;
+    top: 50px;
+    transform: translateY(-50%);
+    border-radius: 50px;
+    width: 369px;
+    height: 85px;
+    background: white;
+    border: solid red 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.text {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50px;
+    width: 300px;
+    background: red;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 20px;
+    padding: 10px 20px 10px 50px;
+} */
+>>>>>>> b3949827 (ok)

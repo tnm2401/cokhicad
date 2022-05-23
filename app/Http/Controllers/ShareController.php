@@ -71,9 +71,10 @@ class ShareController extends BaseController
         $menu['lien-he'] = Page::where('id',14)->first();
         $menu['san-pham'] = Procatone::orderBy('stt','asc')->orderBy('id','desc')->where('hide_show','1')->get();
         $menu['tin-tuc'] = Newcatone::orderBy('stt','asc')->orderBy('id','desc')->where('hide_show','1')->get();
-        $menu['tuyen-dung'] = Recruitment::orderBy('stt','asc')->orderBy('id','desc')->where('hide_show','1')->get();
+        $menu['tin-tuyen-dung'] = Page::where('id',19)->first();
         $menu['tat-ca-san-pham'] = Page::where('id',15)->first();
         $menu['tat-ca-bai-viet'] = Page::where('id',16)->first();
+        $menu['tat-ca-dich-vu'] = Page::where('id',18)->first();
         $menu['dich-vu'] = Svcategory::orderBy('stt','asc')->orderBy('id','desc')->where('hide_show','1')->get();
         $menu['hoat-dong']['media'] = Videocat::where('hide_show','1')->orderby('stt','asc')->orderby('id','desc')->get();
         $menu['hoat-dong']['gallery'] = Gallery::where('hide_show','1')->orderby('stt','asc')->orderby('id','desc')->get();

@@ -7,8 +7,8 @@
         </a>
         <ul class="treeview-menu"
             style="{{ $segment2 == 'videos' || $segment2 == 'videocats' ? 'display:block' : '' }}">
-            <li {{ Hideshow::find(26)->hide_show == 1 ? '' : 'hidden' }} {{ $segment2 == 'videocats' ? 'class=active' : '' }}><a
-                    href="{{ route('backend.videocat.index') }}"><i class="fa fa-angle-right"></i>{{ __('admin.media.cate') }}</a></li>
+            {{-- <li {{ Hideshow::find(26)->hide_show == 1 ? '' : 'hidden' }} {{ $segment2 == 'videocats' ? 'class=active' : '' }}><a
+                    href="{{ route('backend.videocat.index') }}"><i class="fa fa-angle-right"></i>{{ __('admin.media.cate') }}</a></li> --}}
             <li {{ Hideshow::find(27)->hide_show == 1 ? '' : 'hidden' }} {{ $segment2 == 'videos' ? 'class=active' : '' }}><a href="{{ route('video.index') }}"><i
                         class="fa fa-angle-right"></i>{{ __('admin.media.media') }}</a></li>
         </ul>

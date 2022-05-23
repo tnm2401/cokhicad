@@ -44,7 +44,7 @@
                   </th>
                   <th width="5%">STT</th>
                   <th width="10%">Hình ảnh</th>
-                  <th width="25%">
+                  {{-- <th width="25%">
                     <div class="form-group">
                       <select class="form-control select2 choose newcatone" name="newcatone" id="newcatone" style="max-width:100%;">
                         <option value="">Chọn cấp 1</option>
@@ -53,7 +53,7 @@
                         @endforeach
                       </select>
                     </div>
-                  </th>
+                  </th> --}}
                   {{-- <th>
                     <div class="form-group">
                       <select class="form-control select2 choose newcattwo" name="newcattwo" id="newcattwo" style="max-width: 100%;">
@@ -83,9 +83,9 @@
                       <img src="{{ $post->img ? imageUrlBackend('/storage/uploads/post/'.$post->img,'200','170','100','1') : '' }}" class="img-thumbnail" style="max-width: 60px; max-height: auto; margin-bottom: 0px">
                     </a>
                   </td>
-                  <td>
+                  {{-- <td>
                     {{ $post->newcatone->translations->name ?? '' }}
-                  </td>
+                  </td> --}}
                   {{-- <td>
                     {{ $post->newcattwo->translations->name ?? '' }}
                   </td> --}}

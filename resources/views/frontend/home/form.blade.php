@@ -2,10 +2,10 @@
     <section class="bg-blue-form">
         <div class="container">
             <div class="row">
-                <div class="col-md-7 p-lg-5">
+                <div class="col-md-7">
                   {!! $data['contact']->translations->descriptions !!}
                 </div>
-                <div class="col-md-5 mt-3 p-lg-5">
+                <div class="col-md-5 mt-3">
                     <div class="form-contact">
                         <div class="row justify-content-center">
                             <div class="col-md-12 mb-3">

@@ -3,22 +3,22 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9 mb-4 main-content">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4 main-content">
             <nav class="breadcrumb-nav mt-1" aria-label="breadcrumb">
                 <ol class="breadcrumb shadow-sm">
                     <li class="breadcrumb-item"><a href="{{ route('frontend.home.index') }}" title="{{ $setting->translations->name }}"><i
                                 class="ti-home"></i> Trang chủ</a></li>
                     <li class="breadcrumb-item"><a href="{{ route('frontend.slug',$menu['tat-ca-bai-viet']->translations->slug) }}" title="{{ $menu['tat-ca-bai-viet']->translations->name }}"><i
                         class="ti-home"></i> Tin tức</a></li>
-                        <li class="breadcrumb-item"><a href="{{ route('frontend.slug',$post->newcatone->translations->slug) }}" title="{{$post->newcatone->translations->name }}"><i
-                            class="ti-home"></i> {{ $post->newcatone->translations->name }}</a></li>
+                        {{-- <li class="breadcrumb-item"><a href="{{ route('frontend.slug',$post->newcatone->translations->slug) }}" title="{{$post->newcatone->translations->name }}"><i
+                            class="ti-home"></i> {{ $post->newcatone->translations->name }}</a></li> --}}
                     <li class="breadcrumb-item active" aria-current="page">{{ $post->translations->name }}</li>
                 </ol>
             </nav>
             <article class="card post mb-5">
                 <div style="overflow: hidden" class="post-content" id="post_content">
-                    <div class="main-title text-center">
-                        <h1 class="font-weight-bold">{{ $post->translations->name }}</h1>
+                    <div class="main-title ">
+                        <h1 class="font-weight-bold text-center">{{ $post->translations->name }}</h1>
                      </div>
                     {!! $post->translations->content !!}
                 </div>

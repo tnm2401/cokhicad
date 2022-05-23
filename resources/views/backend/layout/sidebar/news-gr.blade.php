@@ -12,8 +12,8 @@
         </a>
         <ul class="treeview-menu"
             style="{{ Request::routeIs('backend.newcatone.*') ? 'display:block' : '' }}">
-            <li {{ Hideshow::find(18)->hide_show == 1 ? '' : 'hidden' }} {{ Request::routeIs('backend.newcatone.*') ? 'class=active' : '' }}><a
-                    href="{{ route('backend.newcatone.index') }}"><i class="fa fa-angle-right"></i>{{ __('admin.post.cate1') }}</a></li>
+            {{-- <li {{ Hideshow::find(18)->hide_show == 1 ? '' : 'hidden' }} {{ Request::routeIs('backend.newcatone.*') ? 'class=active' : '' }}><a
+                    href="{{ route('backend.newcatone.index') }}"><i class="fa fa-angle-right"></i>{{ __('admin.post.cate1') }}</a></li> --}}
             {{-- <li {{ Hideshow::find(19)->hide_show == 1 ? '' : 'hidden' }} {{ Request::routeIs('backend.newcattwo.*') ? 'class=active' : '' }}><a
                     href="{{ route('backend.newcattwo.index') }}"><i class="fa fa-angle-right"></i>{{ __('admin.post.cate2') }}</a></li> --}}
             <li {{ Hideshow::find(20)->hide_show == 1 ? '' : 'hidden' }} {{ Request::routeIs('backend.post.*') ? 'class=active' : '' }}><a

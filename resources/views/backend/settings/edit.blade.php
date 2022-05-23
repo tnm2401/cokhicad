@@ -185,14 +185,14 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>URL WhatsApp</label>
-                                                <input type="text" name="whatsapp" value="@if(isset($setting->whatsapp)){{ old('whatsapp', $setting->whatsapp) }}@else{{ old('whatsapp') }}@endif" class="form-control" data-toggle="tooltip" data-placement="top" title="Nhập URL WhatsApp">
+                                                <label>URL Messenger </label>
+                                                <input type="text" name="whatsapp" value="@if(isset($setting->whatsapp)){{ old('whatsapp', $setting->whatsapp) }}@else{{ old('whatsapp') }}@endif" class="form-control" data-toggle="tooltip" data-placement="top" title="Nhập URL Messenger">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>URL Viber</label>
-                                                <input type="text" name="viber" value="@if(isset($setting->viber)){{ old('viber', $setting->viber) }}@else{{ old('viber') }}@endif" class="form-control" data-toggle="tooltip" data-placement="top" title="Nhập URL Viber">
+                                                <label>URL MAP</label>
+                                                <input type="text" name="viber" value="@if(isset($setting->viber)){{ old('viber', $setting->viber) }}@else{{ old('viber') }}@endif" class="form-control" data-toggle="tooltip" data-placement="top" title="Nhập URL MAP">
                                             </div>
                                         </div>
                                         <div class="col-md-6">

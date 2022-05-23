@@ -2,9 +2,7 @@
     <div class="row about-us">
         <div class="col-md-7">
             <div>
-                <div class="title">
-                    {{ __('VỀ CHÚNG TÔI') }}
-                </div>
+
                 <div>
                     {!!  $data['about-us']->translations->descriptions !!}
                 </div>

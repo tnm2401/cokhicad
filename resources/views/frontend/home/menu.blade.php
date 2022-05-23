@@ -1,17 +1,18 @@
 <div class="sticky-top-head bg-primary">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-4 text-white">
+            <div class="col-md-6 text-white d-none d-lg-block">
+                <i class="fa-solid fa-location-dot"></i> {{ $setting->translations->address }}
+            </div>
+            <div class="col-md-3  text-white">
                 <i class="fa-solid fa-square-phone"></i> Hotline:
                 <strong>{{ $setting->hotline_1 }}</strong>
             </div>
-            <div class="col-md-4 d-none d-lg-block text-white">
+            <div class="col-md-3 d-none d-lg-block text-white">
                 <i class="fa-solid fa-envelope"></i> Email:
                 <strong>{{ $setting->email }}</strong>
             </div>
-            <div class="col-md-4 text-white d-none d-lg-block">
-                <i class="fa-solid fa-location-dot"></i> {{ $setting->translations->address }}
-            </div>
+
         </div>
     </div>
 </div>
@@ -22,7 +23,7 @@
             <div class="col-12">
                 <nav class="navbar navbar-expand-lg">
                     <a class="navbar-brand" href="{{ route('frontend.home.index') }}">
-                        <img src="{{ asset('frontend') }}/img/logo.png" alt="{{ $setting->translations->name }}" />
+                        <img src="{{ asset('storage') }}/uploads/setting/{{ $setting->logoindex }}" alt="{{ $setting->translations->name }}" />
                     </a>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -36,7 +37,7 @@
                             <li class="nav-item  pl-lg-0 ml-lg-0 pl-4 pl-md-0 ml-0 ml-md-4 pl-md-4"> <a class="nav-link" href="{{ route('frontend.home.index') }}"><i class="fa-solid fa-house"></i> </a> </li>
                             <li class="nav-item {{ $isactive == 'gioi-thieu' ? 'active' : '' }} pl-lg-0 ml-lg-0 pl-4 pl-md-0 ml-0 ml-md-4 pl-md-4"><a class="nav-link " href="{{ route('frontend.slug', $menu['gioi-thieu']->translations->slug) }}"> {{ __('GIỚI THIỆU') }} </a></li>
                             <li class="nav-item dropdown  {{ $isactive == 'dich-vu' ? 'active' : '' }} pl-lg-0 ml-lg-0 pl-4 pl-md-0 ml-0 ml-md-4 pl-md-4">
-                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> {{ __('DỊCH VỤ') }} <i class="fa-solid fa-chevron-down"></i> </a>
+                                <a class="nav-link dropdown-toggle" href="{{ route('frontend.slug',$menu['tat-ca-dich-vu']->translations->slug) }}"> {{ __('DỊCH VỤ') }} <i class="fa-solid fa-chevron-down"></i> </a>
                                 <ul class="dropdown-menu">
                                     @foreach ($menu['dich-vu'] as $item)
                                     <li><a class="dropdown-item" href="{{ route('frontend.slug',$item->translations->slug) }}"> {{ $item->translations->name }} </a></li>
@@ -73,20 +74,20 @@
 
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown {{ $isactive == 'tin-tuc' ? 'active' : '' }} pl-lg-0 ml-lg-0 pl-4 pl-md-0 ml-0 ml-md-4 pl-md-4">
-                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">{{ __('TIN TỨC') }} <i class="fa-solid fa-chevron-down"></i> </a>
-                                <ul class="dropdown-menu">
+                            <li class="nav-item  {{ $isactive == 'tin-tuc' ? 'active' : '' }} pl-lg-0 ml-lg-0 pl-4 pl-md-0 ml-0 ml-md-4 pl-md-4">
+                                <a class="nav-link " href="{{ route('frontend.slug',$menu['tat-ca-bai-viet']->translations->slug) }}" >{{ __('TIN TỨC') }} </a>
+                                {{-- <ul class="dropdown-menu">
                                     @foreach ($menu['tin-tuc'] as $item)
                                   <li><a class="dropdown-item" href="{{ route('frontend.slug',$item->translations->slug) }}"> {{ $item->translations->name }} </a></li>
                                   @endforeach
-                                </ul>
+                                </ul> --}}
                             </li>
-                            <li class="nav-item dropdown {{ $isactive == 'tuyen-dung' ? 'active' : '' }} pl-lg-0 ml-lg-0 pl-4 pl-md-0 ml-0 ml-md-4 pl-md-4">
-                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> {{ __('TUYỂN DỤNG') }} <i class="fa-solid fa-chevron-down"></i> </a>
+                            <li class="nav-item  {{ $isactive == 'tuyen-dung' ? 'active' : '' }} pl-lg-0 ml-lg-0 pl-4 pl-md-0 ml-0 ml-md-4 pl-md-4">
+                                <a class="nav-link " href="{{ route('frontend.slug',$menu['tin-tuyen-dung']->translations->slug) }}" > {{ __('TUYỂN DỤNG') }}  </a>
                                 <ul class="dropdown-menu">
-                                    @foreach ($menu['tuyen-dung'] as $item)
+                                    {{-- @foreach ($menu['tuyen-dung'] as $item)
                                   <li><a class="dropdown-item" href="{{ route('frontend.slug',$item->translations->slug) }}"> {{ $item->translations->name }} </a></li>
-                                  @endforeach
+                                  @endforeach --}}
 
                                 </li>
 

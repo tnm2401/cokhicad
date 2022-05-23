@@ -47,7 +47,7 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <div class="form-group">
+                            {{-- <div class="form-group">
                                 <label>Danh mục cấp 1</label>
                                 <select class="form-control select2 choose newcatone" name="newcatone" id="newcatone" style="width: 100%;">
                                     <option value="">Chọn</option>
@@ -55,7 +55,7 @@
                                     <option value="{{ $newcatone->id }}" {{ $post->newcatone_id == $newcatone->id ? 'selected' : '' }}>{{ $newcatone->translations->name }}</option>
                                     @endforeach
                                 </select>
-                            </div>
+                            </div> --}}
                             {{-- <div class="form-group">
                                 <label>Danh mục cấp 2</label>
                                 <select class="form-control select2 choose newcattwo" name="newcattwo" id="newcattwo" style="width: 100%;">

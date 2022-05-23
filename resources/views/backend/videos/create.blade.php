@@ -52,7 +52,7 @@
                   <div class="form-group">
                     <label>Danh mục Video</label>
                     <select class="form-control select2 choose videocat" name="videocat" id="videocat" style="width: 100%;">
-                      <option value="">Chọn</option>
+                      {{-- <option value="">Chọn</option> --}}
                       @foreach($videocats as $videocat)
                       <option value="{{ $videocat->id }}">{{ $videocat->translations->name }}</option>
                       @endforeach

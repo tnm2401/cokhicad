@@ -13,11 +13,31 @@
                 <div class="row justify-content-center ">
                     <div class="col-md-9 mb-5">
                         <div class="description">
-                           {!! $data['step-work']->translations->descriptions !!}
+                            {!! $data['step-work']->translations->descriptions !!}
                         </div>
                     </div>
                 </div>
-                {!! $data['step-work']->translations->content !!}
+                <div class="row">
+                    @foreach ($data['step-work-box'] as $item)
+                    <div class="col-lg-6 col-md-12">
+                        <div class="step" style="background-color:{{ $item->color }}">
+                            <div class="number" style="color: {{ $item->color }}">{{ $item->stt }}</div>
+
+                            <div class="text">
+                                {!! $item->translations->content ?? '' !!}
+                            </div>
+                        </div>
+                        {{-- <span class="label">
+                            <span class="icon">F</span>
+                            <span class="frame">
+                                <span class="text">Lorem ipsum dolor sit Lorem ipsum dolor sit adipisicing?</span>
+                            </span>
+                        </span> --}}
+                    </div>
+                    @endforeach
+
+
+                </div>
 
             </div>
         </div>

@@ -33,7 +33,7 @@
             <figure>
                 <div class="thumbnail-news mb-2">
                     <a href="{{ route('frontend.slug',$item->translations->slug) }}">
-                        <img src="{{ imageUrl('/storage/uploads/post/'.$item->img,'440','300','100','1') }}
+                        <img src="{{ imageUrl('/storage/uploads/servis/'.$item->img,'440','300','100','1') }}
                         "
                             class="img-fluid" alt="{{ $item->translations->title }}"
                             title="{{ $item->translations->title }}">

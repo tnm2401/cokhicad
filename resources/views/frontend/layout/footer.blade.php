@@ -4,13 +4,13 @@
             <div class="col-md-6 mb-2">
                 <div class="title text-uppercase">{{ $setting->translations->name }}</div>
                 {!! $menu['footer']->translations->content !!}
-               <div class="mt-3 image-footer">
-                <img width="200px" src="{{ asset('frontend/img/bo-cong-thuong.png') }}" alt="">
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-google-plus"></i>
-                <i class="fa-brands fa-youtube"></i>
-               </div>
+                <div class="mt-3 image-footer">
+                    <img width="200px" src="{{ asset('frontend/img/bo-cong-thuong.png') }}" alt="">
+                    <a href="{{ $setting->facebook }}"> <i class="fa-brands fa-facebook"></i></a>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-google-plus"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
             </div>
             <div class="col-md-3 mb-2" style="overflow: hidden">
                 <div class="title">
@@ -25,7 +25,12 @@
                     {{ __('KẾT NỐI CAD') }}
                 </div>
                 <div class="content">
-                    <div class="fb-page" data-href="{{ $setting->facebook }}" data-tabs="timeline" data-width="250" data-height="200" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="{{ $setting->facebook }}" class="fb-xfbml-parse-ignore"><a href="{{ $setting->facebook }}"></a></blockquote></div>
+                    <div class="fb-page" data-href="{{ $setting->facebook }}" data-tabs="timeline"
+                        data-width="250" data-height="200" data-small-header="false" data-adapt-container-width="true"
+                        data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="{{ $setting->facebook }}" class="fb-xfbml-parse-ignore"><a
+                                href="{{ $setting->facebook }}"></a></blockquote>
+                    </div>
                 </div>
             </div>
         </div>
@@ -36,36 +41,46 @@
 <a href="#" class="scrollToTop"><i class="fa-solid fa-up-long"></i></a>
 <div class="chat-nav">
     <ul>
-      <li>
-        <a href="/lien-he.html" rel="nofollow">
-          <i class="ticon-heart"></i>{{ __('Tìm đường') }}
-        </a>
-      </li>
-      <li>
-        <a href="https://zalo.me/{{ $setting->hotline_1 }}" rel="nofollow" target="_blank">
-          <i class="ticon-zalo-circle2"></i>{{ __('Chat Zalo') }}
-        </a>
-      </li>
-      <li>
-        <a href="{{ $setting->href_1 }}" rel="nofollow" class="call-mobile">
-          <div class="call-mobile-style">
-            <i class="icon-phone-w" aria-hidden="true"></i>
-          </div>
-          <span class="btn_phone_txt">{{ __('Gọi điện') }}</span>
-        </a>
-      </li>
-      <li>
-        <a href="{{ $setting->facebook }}" rel="nofollow" target="_blank">
-          <i class="ticon-zalo-circle3"></i>{{ __('Messenger') }}
-        </a>
-      </li>
-      <li>
-        <a href="sms:{{ $setting->hotline_1 }}" class="chat_animation">
-          <i class="ticon-chat-sms" aria-hidden="true" title="{{ __('Nhắn tin SMS') }}"></i> {{ __('Nhắn tin SMS') }}
-        </a>
-      </li>
+        <li>
+            <a href="{{ $setting->viber }}" rel="nofollow">
+                <i class="ticon-heart"></i>{{ __('Tìm đường') }}
+            </a>
+        </li>
+        @php
+      $hotline = $setting->hotline_1;
+      $hotline_trim_space = Str::of($hotline)->replace(' ', '');
+      @endphp
+        <li>
+            <a href="https://zalo.me/{{ $hotline_trim_space }}" rel="nofollow" target="_blank">
+                <i class="ticon-zalo-circle2"></i>{{ __('Chat Zalo') }}
+            </a>
+        </li>
+        <li>
+            <a href="{{ $setting->href_1 }}" rel="nofollow" class="call-mobile">
+                <div class="call-mobile-style">
+                    <i class="icon-phone-w" aria-hidden="true"></i>
+                </div>
+                <span class="btn_phone_txt">{{ __('Gọi điện') }}</span>
+            </a>
+        </li>
+        <li>
+            <a href="{{ $setting->whatsapp }}" rel="nofollow" target="_blank">
+                <i class="ticon-zalo-circle3"></i>{{ __('Messenger') }}
+            </a>
+        </li>
+        <li>
+            <a href="sms:{{ $setting->hotline_1 }}" class="chat_animation">
+                <i class="ticon-chat-sms" aria-hidden="true" title="{{ __('Nhắn tin SMS') }}"></i>
+                {{ __('Nhắn tin SMS') }}
+            </a>
+        </li>
     </ul>
+<<<<<<< HEAD
   </div>
+=======
+</div>
+
+>>>>>>> b3949827 (ok)
 <script src="{{ asset('frontend') }}/js/jquery-3.2.1.min.js"></script>
 <script src="{{ asset('frontend') }}/js/jquery.cookie.min.js"></script>
 <script src="{{ asset('frontend') }}/js/google-translate.js"></script>
@@ -86,10 +101,10 @@
             url: "{{ route('refereshcapcha') }}",
             type: "get",
             dataType: "html",
-            success: function (json) {
+            success: function(json) {
                 $(".refereshrecapcha").html(json);
             },
-            error: function (data) {
+            error: function(data) {
                 alert("Try Again.");
             },
         });
@@ -105,11 +120,11 @@
                     required: true,
                     maxlength: 50
                 },
-                email: {
-                    required: true,
-                    maxlength: 50,
-                    email: true,
-                },
+                // email: {
+                //     required: true,
+                //     maxlength: 50,
+                //     email: true,
+                // },
                 subject: {
                     required: true,
                     maxlength: 100

@@ -91,119 +91,54 @@
             $data = Translation::where('slug',$slug)->FirstOrFail();
             switch($data->trans_type){
                 case('App\Models\Page');
+                $page = Page::with('translations')->where('id',$data->trans_id)->First();
+                $master =
+                [
+                    'name' => $page->translations->name,
+                    'title' => $page->translations->title,
+                    'keywords' => $page->translations->keywords,
+                    'description' => $page->translations->description,
+                    'img' => 'pages/'.$page->img,
+                    'type' => $page->type,
+                    'created_at' => $page->created_at,
+                    'updated_at' => $page->updated_at
+                ];
                 if($data->slug == 'gioi-thieu'  || $data->slug == 'about-us'){
-                    $page = Page::with('translations')->where('id',$data->trans_id)->First();
                     $isactive = 'gioi-thieu';
-                    $master =
-                    [
-                        'name' => $page->translations->name,
-                        'title' => $page->translations->title,
-                        'keywords' => $page->translations->keywords,
-                        'description' => $page->translations->description,
-                        'img' => 'pages/'.$page->img,
-                        'type' => $page->type,
-                        'created_at' => $page->created_at,
-                        'updated_at' => $page->updated_at
-                    ];
+
                     return view('frontend.site.about-us',compact('page','master','isactive'));
                 }
                 elseif($data->slug == 'lien-he' || $data->slug == 'contact'){
                     $isactive ='lien-he';
-                    $page = Page::with('translations')->where('id',$data->trans_id)->First();
-                    $master =
-                    [
-                        'name' => $page->translations->name,
-                        'title' => $page->translations->title,
-                        'keywords' => $page->translations->keywords,
-                        'description' => $page->translations->description,
-                        'img' => 'pages/'.$page->img,
-                        'type' => $page->type,
-                        'created_at' => $page->created_at,
-                        'updated_at' => $page->updated_at
-                    ];
+
                     return view('frontend.site.contact',compact('page','master','isactive'));
                 }
                 elseif($data->slug == 'san-pham' || $data->slug == 'product'){
-                    $page = Page::with('translations')->where('id',$data->trans_id)->First();
                     $product = Product::orderby('stt','asc')->orderby('id','desc')->where('hide_show','1')->paginate(9);
                     $isactive = 'san-pham';
-                    $master =
-                    [
-                        'name' => $page->translations->name,
-                        'title' => $page->translations->title,
-                        'keywords' => $page->translations->keywords,
-                        'description' => $page->translations->description,
-                        'img' => 'pages/'.$page->img,
-                        'type' => $page->type,
-                        'created_at' => $page->created_at,
-                        'updated_at' => $page->updated_at
-                    ];
+
                     return view('frontend.site.all-product',compact('page','product','master','isactive'));
                 }
                 elseif($data->slug == 'bai-viet' || $data->slug == 'post'){
                     $isactive='tin-tuc';
-                    $page = Page::with('translations')->where('id',$data->trans_id)->First();
-                    $master =
-                    [
-                        'name' => $page->translations->name,
-                        'title' => $page->translations->title,
-                        'keywords' => $page->translations->keywords,
-                        'description' => $page->translations->description,
-                        'img' => 'pages/'.$page->img,
-                        'type' => $page->type,
-                        'created_at' => $page->created_at,
-                        'updated_at' => $page->updated_at
-                    ];
+
                     $post = Post::where('hide_show','1')->orderby('stt','asc')->orderby('id','desc')->paginate(9);
                     return view('frontend.site.all-post',compact('post','page','master','isactive'));
                 }
                 elseif($data->slug == 'tuyen-dung' || $data->slug == 'recruiment'){
                     $isactive='tuyen-dung';
-                    $page = Page::with('translations')->where('id',$data->trans_id)->First();
-                    $master =
-                    [
-                        'name' => $page->translations->name,
-                        'title' => $page->translations->title,
-                        'keywords' => $page->translations->keywords,
-                        'description' => $page->translations->description,
-                        'img' => 'pages/'.$page->img,
-                        'type' => $page->type,
-                        'created_at' => $page->created_at,
-                        'updated_at' => $page->updated_at
-                    ];
+
                     $post = Recruitment::where('hide_show','1')->orderby('stt','asc')->orderby('id','desc')->paginate(9);
                     return view('frontend.site.all-recruitment',compact('post','page','master','isactive'));
                 }
                 elseif($data->slug == 'dich-vu' || $data->slug == 'all-services'){
                     $isactive='dich-vu';
-                    $page = Page::with('translations')->where('id',$data->trans_id)->First();
-                    $master =
-                    [
-                        'name' => $page->translations->name,
-                        'title' => $page->translations->title,
-                        'keywords' => $page->translations->keywords,
-                        'description' => $page->translations->description,
-                        'img' => 'pages/'.$page->img,
-                        'type' => $page->type,
-                        'created_at' => $page->created_at,
-                        'updated_at' => $page->updated_at
-                    ];
+
                     $service = Servi::where('hide_show','1')->orderby('stt','asc')->orderby('id','desc')->paginate(9);
                     return view('frontend.site.all-service',compact('page','service','master','isactive'));
                 }
                 elseif($data->slug == 'tat-ca-anh' || $data->slug == 'all-gallery'){
-                    $page = Page::with('translations')->where('id',$data->trans_id)->First();
-                    $master =
-                    [
-                        'name' => $page->translations->name,
-                        'title' => $page->translations->title,
-                        'keywords' => $page->translations->keywords,
-                        'description' => $page->translations->description,
-                        'img' => 'pages/'.$page->img,
-                        'type' => $page->type,
-                        'created_at' => $page->created_at,
-                        'updated_at' => $page->updated_at
-                    ];
+
                     $data = Gallery::orderby('id','desc')->orderBy('stt','asc')->get();
                     return view('frontend.site.all-gallery',compact('page','data','master'));
                 }

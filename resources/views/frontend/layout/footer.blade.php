@@ -57,12 +57,23 @@
         </li>
         <li>
             <a href="{{ $setting->href_1 }}" rel="nofollow" class="call-mobile">
-                <div class="call-mobile-style">
-                    <i class="icon-phone-w" aria-hidden="true"></i>
+                <div class="call-mobile-style ">
+                    <i class="icon-phone-w call" aria-hidden="true"></i>
                 </div>
                 <span class="btn_phone_txt">{{ __('Gọi điện') }}</span>
             </a>
         </li>
+        {{-- <li>
+            <a href="{{ $setting->href_1 }}" rel="nofollow" target="_blank">
+                <div class="call-mobile-style ">
+                <i class="call-mobile-style"></i>
+            </div>
+                <span>
+                    {{ __('Gọi điện') }}
+                </span>
+
+            </a>
+        </li> --}}
         <li>
             <a href="{{ $setting->whatsapp }}" rel="nofollow" target="_blank">
                 <i class="ticon-zalo-circle3"></i>{{ __('Messenger') }}
@@ -75,12 +86,9 @@
             </a>
         </li>
     </ul>
-<<<<<<< HEAD
   </div>
-=======
 </div>
 
->>>>>>> b3949827 (ok)
 <script src="{{ asset('frontend') }}/js/jquery-3.2.1.min.js"></script>
 <script src="{{ asset('frontend') }}/js/jquery.cookie.min.js"></script>
 <script src="{{ asset('frontend') }}/js/google-translate.js"></script>

@@ -502,28 +502,18 @@ footer .content p {
 
 .chat-nav {
     position: fixed;
-    left: 13px;
+    right: 13px;
     background: #fff;
     border-radius: 5px;
     width: auto;
     z-index: 150;
-    bottom: 68px;
+    bottom: 200px;
     padding: 10px 0;
     border: 1px solid #f2f2f2;
   }
 
 
-  .chat-nav {
-    position: fixed;
-    left: 13px;
-    background: #fff;
-    border-radius: 5px;
-    width: auto;
-    z-index: 150;
-    bottom: 68px;
-    padding: 10px 0;
-    border: 1px solid #f2f2f2;
-  }
+
   .chat-nav ul {
     list-style: none;
     padding: 0;
@@ -578,6 +568,7 @@ footer .content p {
     margin: auto;
   }
   .chat-nav ul > li a i.ticon-chat-sms {
+
     background: url(../img/icon-sms/icon-sms.jpeg) no-repeat;
     background-size: contain;
     width: 36px;
@@ -585,6 +576,8 @@ footer .content p {
     display: block;
   }
   .chat-nav ul > li a .call-mobile-style {
+    animation: call 3s linear infinite;
+
     background: url(../img/icon-sms/widget_icon_click_to_call.svg)
       no-repeat;
     background-size: contain;
@@ -719,14 +712,12 @@ footer .content p {
     font-size: 50px;
     color:#ffffff;
 }
-<<<<<<< HEAD
 .skiptranslate {
     display: none !important;
 }
 .icon_lang img {
   cursor: pointer;
 }
-=======
 
 .name a{
     color: #050505;
@@ -787,4 +778,19 @@ footer .content p {
     line-height: 20px;
     padding: 10px 20px 10px 50px;
 } */
->>>>>>> b3949827 (ok)
+
+.chat-nav i {
+    transition: .5s;
+    animation: call 3s linear infinite;
+}
+@keyframes call {
+    0%{
+        transform: rotate(-30deg);
+    }
+    50%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(-30deg);
+    }
+}

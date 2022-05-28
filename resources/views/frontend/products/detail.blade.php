@@ -35,7 +35,7 @@
                                 <div class="zoompro-span">
                                     <img class="zoompro blur-up lazyload"
                                         data-zoom-image="{{ asset('storage') }}/uploads/products/{{ $product->img }}"
-                                        alt=""
+                                        alt="Hình ảnh"
                                         src="{{ asset('storage') }}/uploads/products/{{ $product->img }}" />
                                 </div>
                                 <div class="product-labels"><span class="lbl pr-label3">Popular</span></div>
@@ -100,7 +100,7 @@
                                 @endif
                             </p>
                             <div class="orderMsg" data-user="23" data-time="24">
-                                <img src="{{ asset('frontend') }}/assets/images/order-icon.jpg" alt="" />
+                                <img src="{{ asset('frontend') }}/assets/images/order-icon.jpg" alt="Hình ảnh" />
                                 <strong class="items">5</strong> sold in last <strong
                                     class="time">26</strong> hours
                             </div>
@@ -142,7 +142,7 @@
                                     </button>
                                 </div>
                                 <div class="shopify-payment-button" data-shopify="payment-button">
-                                    <button type="submit" name="buy_now" 
+                                    <button type="submit" name="buy_now"
                                         class="shopify-payment-button__button shopify-payment-button__button--unbranded">Buy
                                         it now</button>
                                 </div>
@@ -550,7 +550,7 @@
                             </tbody>
                         </table>
                         <div class="text-center">
-                            <img src="{{ asset('frontend') }}/assets/images/size.jpg" alt="" />
+                            <img src="{{ asset('frontend') }}/assets/images/size.jpg" alt="Hình ảnh" />
                         </div>
                     </div>
 

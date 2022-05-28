@@ -56,7 +56,7 @@
             $data['featured_post'] = Post::orderby('stt','asc')->orderby('id','desc')
             ->where('hide_show',1)->where('is_featured','1')->limit(6)->get();
             $data['featured-product'] = Product::where('hide_show','1')->where('is_featured','1')->orderby('stt','asc')->orderby('id','desc')->get();
-            $data['gallery'] = Productsimage::where('type','3')->limit(20)->get();
+            $data['gallery'] = Productsimage::where('type','3')->where('product_id','14')->limit(20)->get();
 
 
             $time_now = Carbon::now('Asia/Ho_Chi_Minh');

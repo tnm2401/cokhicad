@@ -8,9 +8,11 @@
                 <ol class="breadcrumb shadow-sm">
                     <li class="breadcrumb-item"><a href="{{ route('frontend.home.index') }}" title="{{ $setting->translations->name }}"><i
                                 class="ti-home"></i> Trang chủ</a></li>
-
-                        <li class="breadcrumb-item"><a href="{{ route('frontend.slug',$post->svcate->translations->slug) }}" title="{{$post->svcate->translations->name }}"><i
-                            class="ti-home"></i> {{ $post->svcate->translations->name }}</a></li>
+                        @if($post->svcate){
+                            <li class="breadcrumb-item"><a href="{{ route('frontend.slug',$post->svcate->translations->slug) }}" title="{{$post->svcate->translations->name }}"><i
+                                class="ti-home"></i> {{ $post->svcate->translations->name }}</a></li>
+                        }
+                        @endif
                     <li class="breadcrumb-item active" aria-current="page">{{ $post->translations->name }}</li>
                 </ol>
             </nav>

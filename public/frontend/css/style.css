@@ -794,3 +794,10 @@ footer .content p {
         transform: rotate(-30deg);
     }
 }
+
+
+
+
+.post-content img{
+    max-width: 100%;
+}

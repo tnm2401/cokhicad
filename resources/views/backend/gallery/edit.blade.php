@@ -20,7 +20,7 @@
             <ol class="breadcrumb">
                 <li><a href="{{ route('backend.dashboard.index') }}"><i class="fa fa-dashboard"></i></a></li>
                 <li>Hình ảnh</li>
-                <li><a href="{{ route('backend.gallery.index') }}">Quản lý gallery</a></li>
+                {{-- <li><a href="{{ route('backend.gallery.index') }}">Quản lý gallery</a></li> --}}
                 <li class="active">Sửa</li>
             </ol>
         </section>

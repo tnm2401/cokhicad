@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <img src="{{ imageUrl('/storage/uploads/pages/'.$data['service1']->img,'440','','100','1') }}
-                        " class="img-fluid" alt="">
+                        " class="img-fluid" alt="{{ $data['service1']->translations->title }}" title="{{ $data['service1']->translations->title }}">
                     </div>
                     <div class="col-md-12">
                         <div class="text-content">
@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <img src="{{ imageUrl('/storage/uploads/pages/'.$data['service2']->img,'440','','100','1') }}
-                        " class="img-fluid" alt="">
+                        " class="img-fluid" alt="{{ $data['service2']->translations->title }}"  title="{{ $data['service2']->translations->title }}">
                     </div>
                     <div class="col-md-12">
                         <div class="text-content">

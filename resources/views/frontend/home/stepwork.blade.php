@@ -39,8 +39,58 @@
 
                 </div>
 
+                {{-- <div class="row">
+                    @foreach ($data['step-work-box'] as $item)
+                    <div class="col-md-12 col-lg-6 col-12">
+                        <div class="row ">
+                            <div class="bggg " style="background-color:{{ $item->color }}">
+                            <div class="col-3 align-self-center
+                            ">
+                                <div class="number__z " style="color:{{ $item->color }}">
+                                    1
+                                </div>
+                            </div>
+                            <div class="col-9 align-self-center
+                            ">
+                           <div class="text">
+                            {!! $item->translations->content ?? '' !!}</div></div>
+                        </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div> --}}
+
             </div>
         </div>
 
     </div>
 </section>
+{{-- @push('style')
+    <style>
+        .bggg{
+            display: flex;
+            margin: 10px 15px;
+            width: 100%;
+            border-radius: 57px;
+            background-color: red;
+            min-height: 114px;
+            color: white;
+        }
+        .number__z{
+            font-weight: bold;
+            font-size: 350%;
+            width: 90px;
+            height: 90px;
+            border-radius: 45px;
+            background-color: #edf6ff;
+            text-align: center;
+        }
+
+  @media  screen and (max-width: 450px) {
+    .bggg .text p{
+        font-size: 13px;
+    }
+
+  }
+    </style>
+@endpush --}}

@@ -25,7 +25,6 @@
                     <a class="navbar-brand" href="{{ route('frontend.home.index') }}">
                         <img src="{{ asset('storage') }}/uploads/setting/{{ $setting->logoindex }}" alt="{{ $setting->translations->name }}" />
                     </a>
-
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#main_nav" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -37,29 +36,18 @@
                             <li class="nav-item  pl-lg-0 ml-lg-0 pl-4 pl-md-0 ml-0 ml-md-4 pl-md-4"> <a class="nav-link" href="{{ route('frontend.home.index') }}"><i class="fa-solid fa-house"></i> </a> </li>
                             <li class="nav-item {{ $isactive == 'gioi-thieu' ? 'active' : '' }} pl-lg-0 ml-lg-0 pl-4 pl-md-0 ml-0 ml-md-4 pl-md-4"><a class="nav-link " href="{{ route('frontend.slug', $menu['gioi-thieu']->translations->slug) }}"> {{ __('GIỚI THIỆU') }} </a></li>
                             <li class="nav-item dropdown  {{ $isactive == 'dich-vu' ? 'active' : '' }} pl-lg-0 ml-lg-0 pl-4 pl-md-0 ml-0 ml-md-4 pl-md-4">
-                                <a class="nav-link dropdown-toggle" href="{{ route('frontend.slug',$menu['tat-ca-dich-vu']->translations->slug) }}"> {{ __('DỊCH VỤ') }} <i class="fa-solid fa-chevron-down"></i> </a>
+                                <a class="nav-link dropdown-toggle"  data-toggle="dropdown" href="{{ route('frontend.slug',$menu['tat-ca-dich-vu']->translations->slug) }}"> {{ __('DỊCH VỤ') }} <i class="fa-solid fa-chevron-down"></i> </a>
                                 <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('frontend.slug',$menu['tat-ca-dich-vu']->translations->slug) }}">Tất Cả Dịch Vụ</a>
+                                    </li>
                                     @foreach ($menu['dich-vu'] as $item)
                                     <li><a class="dropdown-item" href="{{ route('frontend.slug',$item->translations->slug) }}"> {{ $item->translations->name }} </a></li>
                                     @endforeach
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown {{ $isactive == 'san-pham' ? 'active' : '' }} pl-lg-0 ml-lg-0 pl-4 pl-md-0 ml-0 ml-md-4 pl-md-4">
-                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> {{ __('SẢN PHẨM') }} <i class="fa-solid fa-chevron-down"></i> </a>
-                                <ul class="dropdown-menu">
-                                    @foreach ($menu['san-pham'] as $item)
-                                  <li><a class="dropdown-item " href="{{ route('frontend.slug',$item->translations->slug) }}"> {{ $item->translations->name }} {{ $item->procat2->count() > 0 ? '»' : '' }} </a>
-                                    @if($item->procat2->count() > 0)
-                                    <ul class="submenu dropdown-menu sub-children">
-                                        @foreach ($item->procat2 as $item2)
-                                        <li><a class="dropdown-item" href="{{ route('frontend.slug',$item2->translations->slug) }}">{{ $item2->translations->name }}</a></li>
-                                        @endforeach
-                                     </ul>
-                                     @endif
-                                </li>
-                                  @endforeach
-
-                                </ul>
+                            <li class="nav-item  {{ $isactive == 'san-pham' ? 'active' : '' }} pl-lg-0 ml-lg-0 pl-4 pl-md-0 ml-0 ml-md-4 pl-md-4">
+                                <a class="nav-link dropdown-toggle" href="{{ route('frontend.slug',$menu['tat-ca-san-pham']->translations->slug) }}" > {{ __('SẢN PHẨM') }}  </a>
                             </li>
                             <li class="nav-item dropdown {{ $isactive == 'hoat-dong' ? 'active' : '' }} pl-lg-0 ml-lg-0 pl-4 pl-md-0 ml-0 ml-md-4 pl-md-4">
                                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> {{ __('HOẠT ĐỘNG') }} <i class="fa-solid fa-chevron-down"></i> </a>
@@ -76,27 +64,16 @@
                             </li>
                             <li class="nav-item  {{ $isactive == 'tin-tuc' ? 'active' : '' }} pl-lg-0 ml-lg-0 pl-4 pl-md-0 ml-0 ml-md-4 pl-md-4">
                                 <a class="nav-link " href="{{ route('frontend.slug',$menu['tat-ca-bai-viet']->translations->slug) }}" >{{ __('TIN TỨC') }} </a>
-                                {{-- <ul class="dropdown-menu">
-                                    @foreach ($menu['tin-tuc'] as $item)
-                                  <li><a class="dropdown-item" href="{{ route('frontend.slug',$item->translations->slug) }}"> {{ $item->translations->name }} </a></li>
-                                  @endforeach
-                                </ul> --}}
                             </li>
                             <li class="nav-item  {{ $isactive == 'tuyen-dung' ? 'active' : '' }} pl-lg-0 ml-lg-0 pl-4 pl-md-0 ml-0 ml-md-4 pl-md-4">
                                 <a class="nav-link " href="{{ route('frontend.slug',$menu['tin-tuyen-dung']->translations->slug) }}" > {{ __('TUYỂN DỤNG') }}  </a>
                                 <ul class="dropdown-menu">
-                                    {{-- @foreach ($menu['tuyen-dung'] as $item)
-                                  <li><a class="dropdown-item" href="{{ route('frontend.slug',$item->translations->slug) }}"> {{ $item->translations->name }} </a></li>
-                                  @endforeach --}}
-
                                 </li>
-
                                 </ul>
                             </li>
                             <li class="nav-item {{ $isactive == 'lien-he' ? 'active' : '' }} pl-lg-0 ml-lg-0 pl-4 pl-md-0 ml-0 ml-md-4 pl-md-4"> <a class="nav-link" href="{{ route('frontend.slug',$menu['lien-he']->translations->slug) }}">{{ __('LIÊN HỆ') }} </a> </li>
-
                             <li class="d-flex">
-                                <a class="icon_lang" href="{{ route('frontend.locale', $lang) }}"><img src="{{ asset('frontend') }}/img/vietnamese.png" alt="" data-google-lang="" /></a>
+                                <a class="icon_lang" href="{{ route('frontend.locale', $lang) }}"><img src="{{ asset('frontend') }}/img/vietnamese.png" alt="vi" data-google-lang="" /></a>
                                 <a class="icon_lang"><img src="{{ asset('frontend') }}/img/english.png" alt="en" data-google-lang="en" /></a>
                             </li>
                         </ul>

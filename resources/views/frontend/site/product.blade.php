@@ -26,7 +26,7 @@
                                                 ">
                                         <img src="{{ imageUrl('/storage/uploads/products/' . $product->img, '440', '', '100', '1') }}"
                                             srcset="{{ imageUrl('/storage/uploads/products/' . $product->img, '800', '', '100', '1') }}"
-                                            alt="" />
+                                            alt="Hình ảnh" />
                                     </a>
                                     <div class="selectors">
                                         @foreach ($product->images as $item)

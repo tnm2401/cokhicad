@@ -41,7 +41,7 @@
 
 $(document).ready(function () {
     $(document).on('click', '.dropdown-menu', function (e) {
-        e.stopPropagation();
+        // e.stopPropagation();
     });
 
     if ($(window).width() < 992) {
@@ -52,7 +52,7 @@ $(document).ready(function () {
         });
 
         $('.dropdown-menu a').click(function (e) {
-            e.preventDefault();
+            // e.preventDefault();
             if ($(this).next('.submenu').length) {
                 $(this).next('.submenu').toggle();
 

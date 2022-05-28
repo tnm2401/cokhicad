@@ -24,7 +24,7 @@
         @foreach ($data['slider'] as $item)
       <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
         {{-- <img class="d-block w-100" src="{{ imageUrl('/storage/uploads/slides/'.$item->img,'1440','478','100','1') }}" alt="First slide"> --}}
-        <img  class="d-block w-100"  src="{{ asset('storage') }}/uploads/slides/{{ $item->img }}" alt="{{ $item->translations->name ?? '' }}">
+        <img  class="d-block w-100"  src="{{ asset('storage') }}/uploads/slides/{{ $item->img }}" alt="{{ __('Slides') }}" title="{{ __('Slides') }}">
       </div>
       @endforeach
 

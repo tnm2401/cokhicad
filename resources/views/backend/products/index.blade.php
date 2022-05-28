@@ -335,7 +335,7 @@ $(document).ready(function(){
     'info'        : true,
     'autoWidth'   : true,
     'columnDefs': [
-    { 'orderable': false, 'targets': [0,1,2,3,4,5,10] }
+    { 'orderable': false, 'targets': [0,1,2,3,4,5] }
     ],
     'language': {
       "sProcessing":   "Đang xử lý...",

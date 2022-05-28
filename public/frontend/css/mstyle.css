@@ -95,7 +95,7 @@
         box-shadow: none;
         position: absolute;
         top: -16px;
-        left: 50%;
+        left: 20%;
         transform: translate(-50%, 0);
         width: 50px !important;
         height: 50px !important;
@@ -202,4 +202,8 @@
         font-size: 20px;
     }
 
+    .navbar-brand img {
+        height: 40px;
+
+    }
   }

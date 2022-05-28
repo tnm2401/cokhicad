@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ $lang }}">
 <head>
+    {{-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> --}}
+
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,6 +27,10 @@
     <link rel="stylesheet" href="{{ asset('frontend') }}/css/slick-theme.css">
     <link rel="stylesheet" href="{{ asset('frontend') }}/magiczoomplus/magiczoomplus.css">
     <link rel="stylesheet" href="{{ asset('frontend') }}/lightboxed/lightboxed.css">
+    <link rel="stylesheet" href="{{ asset('frontend') }}/light-gallery/css/lightgallery-bundle.min.css" />
+    {{-- <link rel="stylesheet" href="{{ asset('frontend') }}/prettyphoto/css/prettyPhoto.css"> --}}
+
+    <link rel="stylesheet" href="{{ asset('frontend') }}/light-gallery/css/lg-thumbnail.css">
     @stack('style')
     <title>CÔNG TY CỔ PHẦN CƠ KHÍ CAD</title>
 </head>

@@ -101,7 +101,7 @@ $('.multiple-items').slick({
 $('.multiple-items-gallery').slick({
     dots: false,
     autoplay: true,
-    infinite: true,
+    // infinite: true,
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 1,

@@ -166,7 +166,7 @@ class GalleryController extends ShareController
         }
         session()->forget('locale');
         alert()->success("Đã cập nhật slide");
-        return redirect()->route('backend.gallery.index');
+        return redirect()->back();
 
 
     }

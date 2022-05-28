@@ -18,6 +18,7 @@ use Validate;
 use Language;
 use Carbon\Carbon;
 use Validator;
+use File;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
@@ -377,7 +378,9 @@ class ProductController extends ShareController
         if ($product) {
             if ($product->img != 'placeholder.png') {
                 $image_path = public_path().'/storage/uploads/products/'.$product->img;
-                unlink($image_path);
+                if( File::exists($image_path)){
+                    unlink($image_path);
+                }
             }
             $image_path_frontend_medium = public_path().'/frontend/thumb/'.$img_size_del_medium;
             $image_path_frontend_small = public_path().'/frontend/thumb/'.$img_size_del_small;
@@ -416,7 +419,9 @@ class ProductController extends ShareController
         $image = Productsimage::find($id);
         if ($image) {
             $image_path_del = public_path().'/storage/uploads/products/'.$image->imgs;
-            unlink($image_path_del);
+            if( File::exists($image_path_del)){
+                unlink($image_path_del);
+            }
             $imgs_name = $image->imgs;
             $find_ext_last = Str::replaceLast('.', '.', $imgs_name);
             $name_without_ext = Str::of($find_ext_last)->beforeLast('.');
@@ -439,7 +444,9 @@ class ProductController extends ShareController
                 // img index
                 if ($image->img != 'placeholder.png') {
                     $image_path = public_path().'/storage/uploads/products/'.$image->img;
-                    unlink($image_path);
+                    if( File::exists($image_path)){
+                        unlink($image_path);
+                    }
                 }
                 // img small & medium
                 $img_name = $image->img;
@@ -461,8 +468,9 @@ class ProductController extends ShareController
                 $imgs_dels = Productsimage::where('product_id',$image->id)->get();
                 foreach($imgs_dels as $img_del) {
                     $imgs_path = public_path().'/storage/uploads/products/'.$img_del->imgs;
-                    unlink($imgs_path);
-                    // img small
+                    if( File::exists($image_path)){
+                        unlink($image_path);
+                    }
                     $imgs_name = $img_del->imgs;
                     $find_ext_last = Str::replaceLast('.', '.', $imgs_name);
                     $name_without_ext = Str::of($find_ext_last)->beforeLast('.');
@@ -491,7 +499,9 @@ class ProductController extends ShareController
                 // img index
                 if ($image->img != 'placeholder.png') {
                     $image_path = public_path().'/storage/uploads/products/'.$image->imgs;
-                    unlink($image_path);
+                    if( File::exists($image_path)){
+                        unlink($image_path);
+                    }
                 }
                 // img small & medium
                 $img_name = $image->imgs;
@@ -524,7 +534,9 @@ class ProductController extends ShareController
                 // img index
                 if ($image->imgs != 'placeholder.png') {
                     $image_path = public_path().'/storage/uploads/products/'.$image->imgs;
-                    unlink($image_path);
+                    if( File::exists($image_path)){
+                        unlink($image_path);
+                    }
                 }
                 // img small & medium
                 $img_name = $image->imgs;

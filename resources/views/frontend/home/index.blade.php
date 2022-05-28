@@ -6,6 +6,7 @@
 @extends('frontend.layout.master-layout')
 @section('content')
     {{-- @include('frontend.home.menu') --}}
+    <h1 hidden>{{ $setting->translations->name }}</h1>
     @include('frontend.home.slide')
     @include('frontend.home.about-us')
     @include('frontend.home.service')

@@ -5,7 +5,7 @@
                 <div class="title text-uppercase">{{ $setting->translations->name }}</div>
                 {!! $menu['footer']->translations->content !!}
                 <div class="mt-3 image-footer">
-                    <img width="200px" src="{{ asset('frontend/img/bo-cong-thuong.png') }}" alt="">
+                    <img width="200px" src="{{ asset('frontend/img/bo-cong-thuong.png') }}" alt="Hình ảnh">
                     <a href="{{ $setting->facebook }}"> <i class="fa-brands fa-facebook"></i></a>
                     <i class="fa-brands fa-twitter"></i>
                     <i class="fa-brands fa-google-plus"></i>
@@ -63,17 +63,6 @@
                 <span class="btn_phone_txt">{{ __('Gọi điện') }}</span>
             </a>
         </li>
-        {{-- <li>
-            <a href="{{ $setting->href_1 }}" rel="nofollow" target="_blank">
-                <div class="call-mobile-style ">
-                <i class="call-mobile-style"></i>
-            </div>
-                <span>
-                    {{ __('Gọi điện') }}
-                </span>
-
-            </a>
-        </li> --}}
         <li>
             <a href="{{ $setting->whatsapp }}" rel="nofollow" target="_blank">
                 <i class="ticon-zalo-circle3"></i>{{ __('Messenger') }}
@@ -102,7 +91,14 @@
 <script src="{{ asset('frontend') }}/js/swal.js"></script>
 <script src="{{ asset('frontend') }}/magiczoomplus/magiczoomplus.js"></script>
 <script src="{{ asset('frontend') }}/lightboxed/lightboxed.js"></script>
-@stack('script');
+<script src="{{ asset('frontend') }}/light-gallery/lightgallery.umd.js"></script>
+<script src="{{ asset('frontend') }}/light-gallery/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+<script src="{{ asset('frontend') }}/light-gallery/plugins/autoplay/lg-autoplay.umd.js"></script>
+<script src="{{ asset('frontend') }}/light-gallery/plugins/share/lg-share.umd.js"></script>
+<script src="{{ asset('frontend') }}/light-gallery/plugins/fullscreen/lg-fullscreen.umd.js"></script>
+<script src="{{ asset('frontend') }}/light-gallery/plugins/pager/lg-pager.umd.js"></script>
+<script src="{{ asset('frontend') }}/light-gallery/plugins/rotate/lg-rotate.umd.js"></script>
+@stack('script')
 <script>
     function refreshCaptcha() {
         $.ajax({
@@ -213,6 +209,74 @@
         })
     }
 </script>
+
+<script type="text/javascript">
+    lightGallery(document.getElementById('lightgallery2'), {
+        selector: '.col-md-3',
+        plugins: [lgAutoplay, lgThumbnail, lgShare, lgFullscreen, lgPager, lgRotate, ],
+        autoplay: true,
+        speed: 500,
+        currentPagerPosition: "right",
+        facebook: true,
+        share: true,
+        fullscreen: true,
+        pager: true,
+        rotate: true,
+        animateThumb: true,
+        enableThumbSwipe: true,
+        toggleThumb: true,
+        autoplayControls: true,
+        slideShowAutoplay: true,
+    });
+</script>
+
+<script>
+$( document ).ready(function() {
+  $(".btn-search").click(function(){
+    $("form").slideToggle("500", "easeInOutCirc");
+    $(".sb").focus();
+  });
+
+
+});
+</script>
+        <script>
+        $('.slide_post').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+    </script>
 </body>
 
 </html>

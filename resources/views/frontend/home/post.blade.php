@@ -9,11 +9,11 @@
                                 class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                     </span>
                 </div>
-                <div class="row mt-2">
+                <div class="row mt-2 slide_post">
                     @foreach ($data['featured_post'] as $item)
-                    <div class="col-md-4 col-6 mb-2">
+                    <div class="col-md-4 col-6 mb-2 mt-2">
                         <img src="{{ imageUrl('/storage/uploads/post/'.$item->img,'370','250','100','1') }}
-                        " class="img-fluid" alt="">
+                        " class="img-fluid" alt="{{ $item->translations->title }}">
                         <h3 class="name font-weight-bold text-uppercase">
                             <a href="{{ route('frontend.slug',$item->translations->slug) }}">
                             {{ $item->translations->name }}
@@ -24,12 +24,13 @@
                         </div>
                     </div>
                     @endforeach
-                    <div class="col-md-12 text-center mt-5">
 
-                        <a class="btn btn-see-more" href="{{ route('frontend.slug',$menu['tat-ca-bai-viet']->translations->slug) }}">
-                                 {{ __('XEM THÊM') }}
-                        </a>
-                    </div>
+                </div>
+                <div class="col-md-12 text-center mt-5">
+
+                    <a class="btn btn-see-more" href="{{ route('frontend.slug',$menu['tat-ca-bai-viet']->translations->slug) }}">
+                             {{ __('XEM THÊM') }}
+                    </a>
                 </div>
             </div>
         </div>

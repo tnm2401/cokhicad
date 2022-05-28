@@ -3,7 +3,7 @@
     <main>
 
         <div class="banner_share">
-            <img src="{{ asset('frontend') }}/assets/img/Classic (1).jpg" alt="">
+            <img src="{{ asset('frontend') }}/assets/img/Classic (1).jpg" alt="Hình ảnh">
             <div class="container">
                 <div class="title">
                     <h2>{{ $cateroom->translations->name }}</h2>

@@ -13,6 +13,9 @@
 
                     </ol>
                 </nav>
+
+
+
                 <div class="main-title text-center mb-5">
                     <h1 class="title font-weight-bold">{{ $procatone->translations->name }}</h1>
                 </div>
@@ -32,7 +35,6 @@
                                 </a>
                             </div>
                             <figcaption>
-
                                 <div class="title_news mt-4 mb-3">
                                     <h3>
                                         <a href="{{ route('frontend.slug',$item->translations->slug) }}"

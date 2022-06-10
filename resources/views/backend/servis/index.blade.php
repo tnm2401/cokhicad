@@ -1,15 +1,15 @@
 @extends('backend.layout.master')
-@section('title','Quản lý tin tức | Tin tức')
+@section('title','Quản lý Dịch vụ | Dịch vụ')
 @section('content')
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper" id="pjax-container">
   <!-- Content Header (Page header) -->
   <section class="content-header">
-    <h4>Tin tức</h4>
+    <h4>Dịch vụ</h4>
     <ol class="breadcrumb">
       <li><a href="{{ route('backend.dashboard.index') }}"><i class="fa fa-dashboard"></i></a></li>
-      <li>Tin tức</li>
-      <li><a href="{{ route('backend.servi.index') }}">Quản lý tin tức</a></li>
+      <li>Dịch vụ</li>
+      <li><a href="{{ route('backend.servi.index') }}">Quản lý Dịch vụ</a></li>
       <li class="active">Tất cả</li>
     </ol>
   </section>

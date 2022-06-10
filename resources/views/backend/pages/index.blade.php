@@ -35,7 +35,7 @@
                                         <a href="{{ route('backend.page.edit', $page->id) }}"><img src="{{ thumbBE('/storage/uploads/pages/'.$page->img,config('thumb.be_thumb.width'),config('thumb.be_thumb.height'),'100','1') }}" class="img-thumbnail">
                                         </a>
                                     </td>
-                                    <td><strong><a href="{{ route('backend.page.edit', $page->id) }}">{{ $page->translations->name }}</a></strong></td>
+                                    <td><strong><a href="{{ route('backend.page.edit', $page->id) }}">{{ $page->translations->name ?? '' }}</a></strong></td>
                                     <td>
                                         <input data-id="{{ $page->id }}" class="hide_show" type="checkbox" data-on="<i class='fa fa-check'></i>" data-off="<i class='fa fa-times'></i>" {{ $page->hide_show ? 'checked' : '' }} data-toggle="toggle" data-onstyle="success" data-offstyle="danger" data-style="ios" data-size="mini">
                                     </td>

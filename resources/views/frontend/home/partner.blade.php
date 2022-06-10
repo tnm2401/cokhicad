@@ -15,7 +15,7 @@
             <div class="row multiple-items">
                 @foreach ($data['partner'] as $item)
                 <div class="col-md-3">
-                    <img src="{{ imageUrl('/storage/uploads/partner/'.$item->img,'300','','100','1') }}
+                    <img style="box-shadow: none" src="{{ imageUrl('/storage/uploads/partner/'.$item->img,'300','','100','1') }}
                     " class="img-fluid" alt="{{ __('Đối tác') }}">
                 </div>
                 @endforeach

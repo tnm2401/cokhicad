@@ -50,23 +50,15 @@ class ShareController extends BaseController
                 ];
         // // cropssize hình
         // $size['backend_thumb'] = Size_crop::whereType('backend_thumb')->first();
-
-
-
-
         View::share('setting',$setting);
         View::share('language',$language);
         View::share('master',$master);
         View::share('lang',$lang);
         // View::share('size',$size);
-
-
         $isactive = '';
         $typeproduct2 = '';
         View::share('isactive',$isactive);
         View::share('typeproduct2',$typeproduct2);
-
-
         $menu['gioi-thieu'] = Page::where('id',8)->first();
         $menu['lien-he'] = Page::where('id',14)->first();
         $menu['san-pham'] = Procatone::orderBy('stt','asc')->orderBy('id','desc')->where('hide_show','1')->get();
@@ -78,13 +70,7 @@ class ShareController extends BaseController
         $menu['dich-vu'] = Svcategory::orderBy('stt','asc')->orderBy('id','desc')->where('hide_show','1')->get();
         $menu['hoat-dong']['media'] = Videocat::where('hide_show','1')->orderby('stt','asc')->orderby('id','desc')->get();
         $menu['hoat-dong']['gallery'] = Gallery::where('hide_show','1')->orderby('stt','asc')->orderby('id','desc')->get();
-
         $menu['footer'] = Page::where('id',17)->first();
-
         View::share('menu',$menu);
-
     }
-
-
-
 }

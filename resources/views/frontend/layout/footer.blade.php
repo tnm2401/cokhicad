@@ -25,18 +25,15 @@
                     {{ __('KẾT NỐI CAD') }}
                 </div>
                 <div class="content">
-                    <div class="fb-page" data-href="{{ $setting->facebook }}" data-tabs="timeline"
-                        data-width="250" data-height="200" data-small-header="false" data-adapt-container-width="true"
-                        data-hide-cover="false" data-show-facepile="true">
-                        <blockquote cite="{{ $setting->facebook }}" class="fb-xfbml-parse-ignore"><a
-                                href="{{ $setting->facebook }}"></a></blockquote>
+                    <div class="fb-page" data-href="{{ $setting->facebook }}" data-tabs="timeline" data-width="250" data-height="215" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="{{ $setting->facebook }}" class="fb-xfbml-parse-ignore"><a href="{{ $setting->facebook }}"></a></blockquote>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </footer>
-<div class="footer-line">Copyright © 2022. CAD. All Rights Reserved. Designed by <a href="https://aib.vn">AIB.VN</a>
+<div class="footer-line">Copyright © {{ Carbon::now()->year }}. {{ $setting->translations->copyright }}. All rights reserved. Designed by <a href="https://aib.vn" target="_blank">AIB.VN</a>
 </div>
 <a href="#" class="scrollToTop"><i class="fa-solid fa-up-long"></i></a>
 <div class="chat-nav">
@@ -77,7 +74,6 @@
     </ul>
   </div>
 </div>
-
 <script src="{{ asset('frontend') }}/js/jquery-3.2.1.min.js"></script>
 <script src="{{ asset('frontend') }}/js/jquery.cookie.min.js"></script>
 <script src="{{ asset('frontend') }}/js/google-translate.js"></script>

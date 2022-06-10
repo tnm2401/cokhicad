@@ -15,7 +15,7 @@
                         <div class="box_product">
                             <a href="{{ route('frontend.slug',$item->translations->slug) }}">
                             <img src="{{ imageUrl('/storage/uploads/products/'.$item->img,'240','160','100','1') }}
-                            " class="img-fluid" alt="{{ $item->translations->title }}" title="{{ $item->translations->title }}"></a>
+                            " alt="{{ $item->translations->title }}" title="{{ $item->translations->title }}"></a>
                             <h3 class="name">
                                 <a href="{{ route('frontend.slug',$item->translations->slug) }}">{{ $item->translations->name }}</a>
                             </h3>
